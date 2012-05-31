@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+   
+
+    <RelativeLayout
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <RelativeLayout
+        android:id="@+id/rl_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <EditText
+	        android:id="@+id/et_name"
+	        android:layout_width="150dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+       		android:layout_alignParentTop="true"
+       		
+	        android:ems="10" />
+
+   		<EditText
+	        android:id="@+id/et_amount"
+	        android:layout_width="150dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+       		android:layout_alignParentTop="true"
+       		android:layout_toRightOf="@+id/et_name"
+	        android:ems="10"
+	        android:inputType="numberDecimal" />
+		</RelativeLayout>
+        <Button
+            android:id="@+id/b_add"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_edit"
+            android:text="Add Transaction" />
+        <Button
+            android:id="@+id/b_remove_table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b_add"
+            android:text="Remove all Rows" />
+        
+    </RelativeLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+</LinearLayout>
