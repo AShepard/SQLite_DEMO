@@ -7,7 +7,16 @@ public class Transaction {
 	private String m_category;
 	private String m_date;
 
+	public Transaction(long id, String name, float value, String category, String date) {
+		m_id = id;
+		m_name = name;
+		m_value = value;
+		m_category = category;
+		m_date = date;
+	}
+	
 	public Transaction(String name, float value, String category, String date) {
+		m_id = -1;
 		m_name = name;
 		m_value = value;
 		m_category = category;
@@ -58,7 +67,7 @@ public class Transaction {
 	
 	@Override
 	public String toString() {
-		String ret_str = m_id + " " + m_name + " " + m_value + " " + m_category + " " + m_date;
+		String ret_str = "ID: " + m_id + " " + m_name + " " + m_value + " " + m_category + " " + m_date;
 		return ret_str;
 	}
 	

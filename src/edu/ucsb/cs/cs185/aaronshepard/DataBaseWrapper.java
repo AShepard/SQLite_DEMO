@@ -116,7 +116,7 @@ public class DataBaseWrapper {
 		
 	private Transaction cursorToComment(Cursor cursor) {
 		//TODO: get rest of fields
-		Transaction trans = new Transaction(cursor.getString(1), cursor.getFloat(2), cursor.getString(3), cursor.getString(4));
+		Transaction trans = new Transaction(cursor.getInt(0), cursor.getString(1), cursor.getFloat(2), cursor.getString(3), cursor.getString(4));
 		return trans;
 	}
 	
